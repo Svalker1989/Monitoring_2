@@ -55,11 +55,12 @@ _____
 
 Для успешного выполнения задания нужно привести:
 
-* работающий код python3-скрипта;
-* конфигурацию cron-расписания;
-`* * * * * python3 /tmp/mon.py`
-* пример верно сформированного 'YY-MM-DD-awesome-monitoring.log', имеющий не меньше пяти записей.
-
+* работающий код python3-скрипта;  
+  [mon.py](https://github.com/Svalker1989/Monitoring_2/blob/master/10-monitoring-01-base/mon.py)  
+* конфигурацию cron-расписания;  
+`* * * * * python3 /tmp/mon.py`  
+* пример верно сформированного 'YY-MM-DD-awesome-monitoring.log', имеющий не меньше пяти записей.  
+[2024-06-25-awesome-monitoring.log](https://github.com/Svalker1989/Monitoring_2/blob/master/10-monitoring-01-base/2024-06-25-awesome-monitoring.log)  
 Дополнительная информация:
 
 1. Количество собираемых метрик должно быть не меньше четырёх.
