@@ -24,9 +24,9 @@
 1. Используя директорию [help](./help) внутри этого домашнего задания, запустите связку prometheus-grafana.
 1. Зайдите в веб-интерфейс grafana, используя авторизационные данные, указанные в манифесте docker-compose.
 1. Подключите поднятый вами prometheus, как источник данных.
-1. Решение домашнего задания — скриншот веб-интерфейса grafana со списком подключенных Datasource.
+1. Решение домашнего задания — скриншот веб-интерфейса grafana со списком подключенных Datasource.  
 Скриншот:  
-   ](https://github.com/Svalker1989/Monitoring_2/blob/master/10-monitoring-03-grafana/1.PNG)
+   ![](https://github.com/Svalker1989/Monitoring_2/blob/master/10-monitoring-03-grafana/1.PNG)  
 ## Задание 2
 
 Изучите самостоятельно ресурсы:
@@ -52,9 +52,9 @@ promql:
 promql:
 `node_filesystem_avail_bytes{fstype!='tmpfs'}`
 
-Для решения этого задания приведите promql-запросы для выдачи этих метрик, а также скриншот получившейся Dashboard.
+Для решения этого задания приведите promql-запросы для выдачи этих метрик, а также скриншот получившейся Dashboard.  
 Скриншот дашборда:  
-![](https://github.com/Svalker1989/Monitoring_2/blob/master/10-monitoring-03-grafana/2.PNG)
+![](https://github.com/Svalker1989/Monitoring_2/blob/master/10-monitoring-03-grafana/2.PNG)  
 ## Задание 3
 
 1. Создайте для каждой Dashboard подходящее правило alert — можно обратиться к первой лекции в блоке «Мониторинг».
@@ -64,8 +64,8 @@ promql:
 ## Задание 4
 
 1. Сохраните ваш Dashboard.Для этого перейдите в настройки Dashboard, выберите в боковом меню «JSON MODEL». Далее скопируйте отображаемое json-содержимое в отдельный файл и сохраните его.
-1. В качестве решения задания приведите листинг этого файла.
-[dashboard.json](https://github.com/Svalker1989/Monitoring_2/blob/master/10-monitoring-03-grafana/dashboard.json)
+1. В качестве решения задания приведите листинг этого файла.  
+[dashboard.json](https://github.com/Svalker1989/Monitoring_2/blob/master/10-monitoring-03-grafana/dashboard.json)  
 ---
 
 ### Как оформить решение задания
