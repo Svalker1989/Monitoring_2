@@ -58,9 +58,9 @@ promql:
 ## Задание 3
 
 1. Создайте для каждой Dashboard подходящее правило alert — можно обратиться к первой лекции в блоке «Мониторинг».
-1. В качестве решения задания приведите скриншот вашей итоговой Dashboard.
+1. В качестве решения задания приведите скриншот вашей итоговой Dashboard.  
 Скриншот дашборда:  
-   ](https://github.com/Svalker1989/Monitoring_2/blob/master/10-monitoring-03-grafana/3.PNG)
+   ![](https://github.com/Svalker1989/Monitoring_2/blob/master/10-monitoring-03-grafana/3.PNG)  
 ## Задание 4
 
 1. Сохраните ваш Dashboard.Для этого перейдите в настройки Dashboard, выберите в боковом меню «JSON MODEL». Далее скопируйте отображаемое json-содержимое в отдельный файл и сохраните его.
