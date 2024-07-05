@@ -12,7 +12,13 @@
 - [привязываем индексы из elastic в kibana](https://www.elastic.co/guide/en/kibana/current/index-patterns.html);
 - [как просматривать логи в kibana](https://www.elastic.co/guide/en/kibana/current/discover.html);
 - [решение ошибки increase vm.max_map_count elasticsearch](https://stackoverflow.com/questions/42889241/how-to-increase-vm-max-map-count).
-
+       Можно либо в docker-compose.yml добавить
+  ```yml
+  environment:  
+  - node.store.allow_mmap=false
+  ```
+  либо в гостевой системе  
+`sysctl -w vm.max_map_count=262144`  
 В процессе выполнения в зависимости от системы могут также возникнуть не указанные здесь проблемы.
 
 Используйте output stdout filebeat/kibana и api elasticsearch для изучения корня проблемы и её устранения.
@@ -40,18 +46,18 @@ Filebeat следует сконфигурировать для отправки
 Результатом выполнения задания должны быть:
 
 - скриншот `docker ps` через 5 минут после старта всех контейнеров (их должно быть 5);  
-![1]()  
+![](https://github.com/Svalker1989/Monitoring_2/blob/master/10-monitoring-04-elk/1.PNG)   
 - скриншот интерфейса kibana;  
-![2]()  
-- docker-compose манифест (если вы не использовали директорию help);
-- ваши yml-конфигурации для стека (если вы не использовали директорию help).
+![](https://github.com/Svalker1989/Monitoring_2/blob/master/10-monitoring-04-elk/2.PNG)    
+- docker-compose манифест (если вы не использовали директорию help); использовал
+- ваши yml-конфигурации для стека (если вы не использовали директорию help). исопльзовал
 
 ## Задание 2
 
 Перейдите в меню [создания index-patterns  в kibana](http://localhost:5601/app/management/kibana/indexPatterns/create) и создайте несколько index-patterns из имеющихся.
 
-Перейдите в меню просмотра логов в kibana (Discover) и самостоятельно изучите, как отображаются логи и как производить поиск по логам.
-
+Перейдите в меню просмотра логов в kibana (Discover) и самостоятельно изучите, как отображаются логи и как производить поиск по логам.  
+![](https://github.com/Svalker1989/Monitoring_2/blob/master/10-monitoring-04-elk/3.PNG)  
 В манифесте директории help также приведенно dummy-приложение, которое генерирует рандомные события в stdout-контейнера.
 Эти логи должны порождать индекс logstash-* в elasticsearch. Если этого индекса нет — воспользуйтесь советами и источниками из раздела «Дополнительные ссылки» этого задания.
  
