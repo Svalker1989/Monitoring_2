@@ -9,16 +9,17 @@ services:
 
   es-hot:
     image: elasticsearch:8.7.0
-    container_name: es-hot
+    container_name: es-hot            
     environment:
       - node.name=es-hot
       - cluster.name=es-docker-cluster
+      - node.store.allow_mmap=false
       - discovery.seed_hosts=es-hot,es-warm
       - cluster.initial_master_nodes=es-hot,es-warm
       - node.roles=master,data_content,data_hot  
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
       - "http.host=0.0.0.0"
-      - xpack.security.enabled=false
+      - xpack.security.enabled=false        
     volumes:
       - data01:/usr/share/elasticsearch/data:Z
     ulimits:
@@ -37,16 +38,17 @@ services:
 
   es-warm:
     image: elasticsearch:8.7.0
-    container_name: es-warm
+    container_name: es-warm        
     environment:
       - node.name=es-warm
       - cluster.name=es-docker-cluster
+      - node.store.allow_mmap=false
       - discovery.seed_hosts=es-hot,es-warm
       - cluster.initial_master_nodes=es-hot,es-warm
       - node.roles=master,data_warm
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
       - xpack.security.enabled=false
-      - "http.host=0.0.0.0"
+      - "http.host=0.0.0.0"                 
     volumes:
       - data02:/usr/share/elasticsearch/data:Z
     ulimits:
